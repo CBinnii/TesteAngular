@@ -1,0 +1,137 @@
+@import '../../../scss/variables';
+
+.produtos {
+	display: flex;
+	
+	.produto {
+		// border: 2px solid #f7941d;
+		border-radius: 20px;
+		// padding: 20px;
+		box-shadow: 0 0 1em rgba(0,0,0,0.25);
+
+		a {
+			text-decoration: none;
+		}
+
+		p {
+			font-size: small;
+			color: black;
+			font-family: "Hurme Bold";
+			text-align: center;
+			margin: 0;;
+		}
+
+		h2 {
+			font-size: 24px;
+			font-family: "Hurme Bold", Helvetica, Arial, sans-serif;
+			font-weight: bold;
+			margin-bottom: 30px;
+			text-align: center;
+			color: #727272;
+
+			&::before {
+				margin-right: .4em;
+			}
+
+			&:after {
+				margin-left: .4em;
+			}
+
+			&:before, &:after {
+				content: "\2014";
+				font-family: "Hurme", Helvetica, Arial, sans-serif;
+			}
+		}
+
+		h4 {
+			font-size: 20px;
+			font-family: "Hurme Bold", Helvetica, Arial, sans-serif;
+			font-weight: bold;
+			text-align: center;
+			// height: 60px;
+			margin-bottom: 10px;
+			color: #f7941d;
+		}
+
+		.imagem {
+			overflow: hidden;
+			margin-bottom: 30px;
+			display: flex;
+			height: 200px;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				-webkit-transition: -webkit-transform ease .6s;
+				transition: -webkit-transform ease .6s;
+				transition: transform ease .6s;
+				transition: transform ease .6s, -webkit-transform ease .6s;
+				-webkit-transform: scale(0.8);
+				-ms-transform: scale(0.8);
+				transform: scale(0.8);
+
+				max-height: 200px;
+			}
+		}
+		
+		.sobre {
+			padding: 20px;
+		}
+
+		.preco {
+			background: $yellow3;
+			color: $white;
+			display: block;
+			font-family: "Hurme Bold", Helvetica, Arial, sans-serif;
+			font-weight: bold;
+			font-size: 22px;
+			text-align: center;
+			padding: 15px 0;
+			position: relative;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+
+			span {
+				font-family: "Futura DZ";
+			}
+
+			&:after {
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 8px solid $white;
+				content: "";
+				height: 0;
+				left: 50%;
+				margin-left: -10px;
+				position: absolute;
+				top: 0;
+				width: 0;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+			
+			h4 {
+				text-decoration: underline;
+			}
+
+			.imagem {
+				img {
+					-webkit-transform: scale(1);
+					-ms-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+
+			.preco {
+				background-color: $orange-1;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			border-radius: 20px;
+		}
+	}
+}

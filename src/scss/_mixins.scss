@@ -1,0 +1,50 @@
+@mixin border_radius( $radius ){
+    border-radius: $radius;
+    -o-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+@mixin transition( $transition ){
+    transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+}
+
+@mixin transform( $tranform ){
+    transform: $tranform;
+    -o-transform: $tranform;
+    -ms-transform: $tranform;
+    -moz-transform: $tranform;
+    -webkit-transform: $tranform;
+}
+
+@mixin box_shadow( $shadow ){
+    box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -moz-box-shadow: $shadow; 
+    -webkit-box-shadow: $shadow;
+}
+
+@mixin create_cta( $bg_color, $color, $font_size ){
+    background-color: $bg_color;
+    color: $color;
+    font-size: $font_size;
+    // margin: auto;
+    border: none;
+    padding: 10px 50px;
+    @include border_radius( 100px );
+    cursor: pointer;
+}
+
+@mixin column-count($column-number){
+    column-count: $column-number;
+    -o-column-count: $column-number;
+    -ms-column-count: $column-number;
+    -moz-column-count: $column-number;
+    -webkit-column-count: $column-number;
+}
