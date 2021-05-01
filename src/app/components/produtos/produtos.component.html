@@ -1,27 +1,49 @@
-<div class="banner-top"></div>
+<div class="banner banner-produto"></div>
 
-<div class="container">
-	<h1>Produtos</h1>
-	
-	<div class="produtos row">
-		<div *ngFor="let p of produtos" class="col-md-4 padding-adjust">
-			<div class="produto">
-				<a [title]="p.name" [routerLink]="['/produto', p.id]">
-					<div class="sobre">
-						<h2>Troque</h2>
-						<figure class="imagem">
-							<img src="http://i.mlcdn.com.br/900x900/224730900.jpg" alt="">
-							<!-- <img [src]="p.image" alt="">
-							<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="/> -->
-						</figure>
-						<p>{{ p.description }}</p>
-						<h4>{{ p.name }}</h4>
-					</div>
-					<div class="preco">
-						<span>D\</span> {{ p.price }}
-					</div>
-				</a>
+<div class="produto-content">
+	<div class="container">
+		<h1>Produtos</h1>
+		
+		<div class="produtos row">
+			<div *ngFor="let p of pagedItems" class="col-md-4 padding-adjust">
+				<div class="produto">
+					<a [title]="p.name" [routerLink]="['/produto', p.id]">
+						<div class="sobre">
+							<h2>Troque</h2>
+							<figure class="imagem">
+								<!-- <img src="http://i.mlcdn.com.br/900x900/224730900.jpg" alt=""> -->
+								<img [src]="p.image" alt="">
+								<!-- <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="/> -->
+							</figure>
+							<p>{{ p.description }}</p>
+							<h4>{{ p.name }}</h4>
+						</div>
+						<div class="preco">
+							<span>D\</span> {{ p.price }}
+						</div>
+					</a>
+				</div>
 			</div>
+		</div>
+
+		<div class="paginacao">
+			<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+				<!-- <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+					<a class="page-link" (click)="setPage(1)"><i class="fas fa-fast-backward"></i></a>
+				</li> -->
+				<li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+					<a class="page-link" (click)="setPage(pager.currentPage - 1)"><i class="fas fa-chevron-left"></i></a>
+				</li>
+				<li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+					<a class="page-link" (click)="setPage(page)">{{page}}</a>
+				</li>
+				<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+					<a class="page-link" (click)="setPage(pager.currentPage + 1)"><i class="fas fa-chevron-right"></i></a>
+				</li>
+				<!-- <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+					<a class="page-link" (click)="setPage(pager.totalPages)"><i class="fas fa-fast-forward"></i></a>
+				</li> -->
+			</ul>
 		</div>
 	</div>
 </div>

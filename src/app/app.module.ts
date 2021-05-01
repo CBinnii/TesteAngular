@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+import { appRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -8,10 +13,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { ProdutoDetalheComponent } from './components/produto-detalhe/produto-detalhe.component';
 import { SobreComponent } from './components/sobre/sobre.component';
-import { ProdutosService } from './services/produtos.service';
-
-import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
+import { ProdutosService } from './_services/produtos.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,17 +27,17 @@ import { FooterComponent } from './components/footer/footer.component';
     ProdutoDetalheComponent,
     SobreComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      { path: 'produtos', component: ProdutosComponent },
-      { path: 'produto/:productId', component: ProdutoDetalheComponent },
-      { path: 'sobre', component: SobreComponent }
-    ])
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    appRoutingModule
   ],
   providers: [
     ProdutosService

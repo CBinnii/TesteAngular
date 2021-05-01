@@ -1,0 +1,187 @@
+@import '../../../scss/variables';
+
+.produto-detalhe {
+	padding: 40px 0;
+
+	h3 {
+		font-size: 38px;
+		margin-bottom: 5px;
+		color: #fbbc21;
+		letter-spacing: 0;
+		line-height: 38px;
+		font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bold;
+	}
+
+	h4 {
+		color: #727272;
+		font-family: "Hurme Bold", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bold;
+		font-size: 15px;
+		letter-spacing: 0;
+		line-height: 21px;
+		margin-bottom: 20px;
+	}
+
+	.produto-imagem {
+		background-color: $white;
+		padding: 15px;
+		display: flex;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 0 1em rgba(0,0,0,0.25);
+		border-radius: 20px;
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 30px;
+		}
+
+		.imagem {
+			overflow: hidden;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+			height: 300px;
+
+			img {
+				-webkit-transition: -webkit-transform ease .6s;
+				transition: -webkit-transform ease .6s;
+				transition: transform ease .6s;
+				transition: transform ease .6s, -webkit-transform ease .6s;
+				-webkit-transform: scale(0.9);
+				-ms-transform: scale(0.9);
+				transform: scale(0.9);
+				height: 300px;
+			}
+		}
+
+		&:hover {
+			.imagem {
+				img {
+					-webkit-transform: scale(1);
+					-ms-transform: scale(1);
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	
+	@media screen and (max-width: 767px) {
+		.row {
+			display: block;
+		}
+	}
+	
+	.produto-dados {  
+		background-color: $white;
+		padding: 15px 30px;
+		height: 100%;
+		box-shadow: 0 0 1em rgba(0,0,0,0.25);
+		border-radius: 20px;
+
+		h5 {
+			font-size: 35px;
+			color: #fbbc21;
+			letter-spacing: 0;
+			line-height: 38px;
+			font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-weight: bold;
+
+			span {
+				font-family: "Futura DZ";
+			}
+		}
+		
+		p {
+			margin: 0;
+			margin-bottom: 15px;
+			font-family: "Hurme", Arial, Helvetica, sans-serif;
+
+			&.categoria {
+				font-family: "Hurme Bold", Arial, Helvetica, sans-serif;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			&.troqueDZ {
+				font-family: "Hurme Bold", Arial, Helvetica, sans-serif;
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.info {
+	background-color: $white;
+	margin-top: 30px;
+	box-shadow: 0 0 1em rgba(0,0,0,0.1);
+	padding: 20px;
+
+	h2 {
+		font-size: 22px;
+		color: #fbbc21;
+		letter-spacing: 0;
+		line-height: 30px;
+		margin-bottom: 20px;
+		font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	h1 {
+		color: #172860;
+		font-family: "Hurme", Helvetica, Arial, sans-serif;
+		font-size: 17px;
+		letter-spacing: 0;
+		line-height: 23px;
+	}
+
+	p {
+		font-family: "Hurme", Helvetica, Arial, sans-serif;
+		font-size: 15px;
+		letter-spacing: 0;
+		line-height: 21px;
+	}
+}
+
+.produto-detalhe-erro {
+	min-height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h3 {
+		margin-bottom: 20px;
+	}
+
+	p {
+		color: #727272;
+		font-family: "Hurme", Helvetica, Arial, sans-serif;
+	}
+
+}
+
+.btn-voltar, .btn-trocar {
+	padding: 8px 20px;
+	color: #ffffff;
+	background-color: #fbbc21;
+	border-color: #fbb408;
+	display: inline-block;
+	margin-bottom: 0;
+	font-family: "Hurme Bold", Helvetica, Arial, sans-serif;
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.5;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 -3px 0 rgba(238,129,40,0.8);
+	box-shadow: inset 0 -3px 0 rgba(238,129,40,0.8);
+	border: none;
+
+	&:hover {
+		background-color: #e5a404;
+		border-color: #c28b03;
+		-webkit-box-shadow: inset 0 -3px 0 rgba(238,129,40,1);
+		box-shadow: inset 0 -3px 0 rgba(238,129,40,1);
+	}
+}

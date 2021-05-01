@@ -13,4 +13,8 @@ export class ProdutosService {
 	listar() {
 		return this.http.get<any[]>(`${this.UrlProdutos}`);
 	}
+
+	getProduto(id) {
+		return this.http.get<any[]>(`${this.UrlProdutos}/${id}`);
+	}
 }

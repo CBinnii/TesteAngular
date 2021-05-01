@@ -1,0 +1,45 @@
+@import '../../../scss/variables';
+
+.register {
+	padding: 40px 0;
+
+	h2 {
+		text-align: center;
+		font-size: 38px;
+		margin-bottom: 15px;
+		color: $orange-0;
+		letter-spacing: 0;
+		line-height: 38px;
+		font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bold;
+	}
+
+	p {
+		color: $black;
+		margin: 0;
+		margin-bottom: 30px;
+		padding: 0;
+		font-family: "Hurme Bold", Helvetica, Arial, sans-serif;
+		text-align: center;
+	}
+
+	form {
+		max-width: 400px;
+		width: 100%;
+		margin: 0 auto;
+		display: block;
+		
+		label {
+			color: #727272;
+			margin: 0;
+			width: 100%;
+			text-align: center;
+			margin-bottom: 5px;
+			font-family: "Hurme Bold", Arial, Helvetica, sans-serif;
+		}
+
+		.btn-button {
+			margin-right: 15px;
+		}
+	}
+}
