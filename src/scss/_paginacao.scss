@@ -1,0 +1,33 @@
+.paginacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    .pagination {
+        .page-item {
+            .page-link {
+                cursor: pointer;
+                font-family: 'Hurme', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                color: $blue-2;
+                border-color: $blue-2;
+            }
+
+            &.disabled {
+                .page-link {
+                    opacity: 0.7;
+                }
+            }
+
+            &.active, &:hover {
+                .page-link {
+                    color: $yellow-2;
+                    background-color: $blue-2;
+                    border-color: $white;
+                    border-top: 1px solid $blue-2;
+                    border-bottom: 1px solid $blue-2;
+                }
+            }
+        }
+    }
+}

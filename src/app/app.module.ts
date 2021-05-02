@@ -18,30 +18,38 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { ProdutosService } from './_services/produtos.service';
+import { CarrinhoComponent } from './components/carrinho/carrinho.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { AlertaComponent } from './components/alerta/alerta.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ProdutosComponent,
-    ProdutoDetalheComponent,
-    SobreComponent,
-    HeaderComponent,
-    FooterComponent,
-    LoginComponent,
-    RegisterComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    NgxPaginationModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    appRoutingModule
-  ],
-  providers: [
-    ProdutosService
-  ],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HomeComponent,
+		ProdutosComponent,
+		ProdutoDetalheComponent,
+		SobreComponent,
+		HeaderComponent,
+		FooterComponent,
+		LoginComponent,
+		RegisterComponent,
+		CarrinhoComponent,
+		DashboardComponent,
+		PerfilComponent,
+		AlertaComponent
+	],
+	imports: [
+		BrowserModule,
+		HttpClientModule,
+		NgxPaginationModule,
+		ReactiveFormsModule,
+		HttpClientModule,
+		appRoutingModule
+	],
+	providers: [
+		ProdutosService
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

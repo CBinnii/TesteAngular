@@ -23,9 +23,9 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-        return this.http.post<any>(`https://6089cd648c8043001757f650.mockapi.io/User/?username=${username}&password=${password}`, { username, password })
+        return this.http.get<any>(`https://6089cd648c8043001757f650.mockapi.io/User/?username=${username}&password=${password}`)
             .pipe(map(user => {
-                if (user && user.token) {
+                if (user) {
                     localStorage.setItem('currentUser', JSON.stringify(user));
                     this.currentUserSubject.next(user);
                 }
@@ -35,7 +35,6 @@ export class AuthenticationService {
     }
 
     logout() {
-        // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
     }

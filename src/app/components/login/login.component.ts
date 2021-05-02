@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
 	constructor( private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService, private alertService: AlertService ) {
 		if (this.authenticationService.currentUserValue) { 
-			this.router.navigate(['/']);
+			this.router.navigate(['/dashboard']);
 		}
 	}
 
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
 			password: ['', Validators.required]
 		});
 
-		this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+		this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';
 	}
 
 	get f() { return this.loginForm.controls; }

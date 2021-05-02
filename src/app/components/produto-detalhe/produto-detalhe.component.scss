@@ -6,7 +6,7 @@
 	h3 {
 		font-size: 38px;
 		margin-bottom: 5px;
-		color: #fbbc21;
+		color: $orange-0;
 		letter-spacing: 0;
 		line-height: 38px;
 		font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -84,7 +84,7 @@
 
 		h5 {
 			font-size: 35px;
-			color: #fbbc21;
+			color: $orange-0;
 			letter-spacing: 0;
 			line-height: 38px;
 			font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -122,7 +122,7 @@
 
 	h2 {
 		font-size: 22px;
-		color: #fbbc21;
+		color: $orange-0;
 		letter-spacing: 0;
 		line-height: 30px;
 		margin-bottom: 20px;
@@ -130,7 +130,7 @@
 	}
 
 	h1 {
-		color: #172860;
+		color: $blue-1;
 		font-family: "Hurme", Helvetica, Arial, sans-serif;
 		font-size: 17px;
 		letter-spacing: 0;
@@ -160,28 +160,4 @@
 		font-family: "Hurme", Helvetica, Arial, sans-serif;
 	}
 
-}
-
-.btn-voltar, .btn-trocar {
-	padding: 8px 20px;
-	color: #ffffff;
-	background-color: #fbbc21;
-	border-color: #fbb408;
-	display: inline-block;
-	margin-bottom: 0;
-	font-family: "Hurme Bold", Helvetica, Arial, sans-serif;
-	text-align: center;
-	font-size: 14px;
-	line-height: 1.5;
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 -3px 0 rgba(238,129,40,0.8);
-	box-shadow: inset 0 -3px 0 rgba(238,129,40,0.8);
-	border: none;
-
-	&:hover {
-		background-color: #e5a404;
-		border-color: #c28b03;
-		-webkit-box-shadow: inset 0 -3px 0 rgba(238,129,40,1);
-		box-shadow: inset 0 -3px 0 rgba(238,129,40,1);
-	}
 }

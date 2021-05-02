@@ -1,0 +1,28 @@
+@import '../../../scss/variables';
+
+.home {
+	padding: 40px;
+
+	h2 {
+		font-size: 38px;
+		margin-bottom: 5px;
+		color: $orange-0;
+		letter-spacing: 0;
+		line-height: 38px;
+		margin-bottom: 15px;
+		font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: bold;
+	}
+
+	p {
+		margin: 0;
+		margin-bottom: 15px;
+		font-family: "Hurme", Arial, Helvetica, sans-serif;
+
+		strong {
+			font-family: "Hurme Bold", Arial, Helvetica, sans-serif;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+}

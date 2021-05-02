@@ -26,11 +26,17 @@
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="#">Meus Pedidos</a>
 							<a class="dropdown-item" href="#">Meu Extrato</a>
+							<a class="dropdown-item" href="/perfil">Meus Dados</a>
+							<a class="dropdown-item" href="/novo-endereco">Novo Endereço</a>
 							<a class="dropdown-item" (click)="logout()">Sair</a>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</nav>
+
+		<a routerLink="/carrinho" class="button fancy-button">
+			<i class="fas fa-shopping-cart"></i>
+		</a>
 	</div>
 </header>

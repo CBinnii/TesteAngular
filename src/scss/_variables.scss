@@ -1,10 +1,11 @@
 /*
 ** Azul
 */
-$blue-1: rgb(0, 33, 87);
-$blue0: rgb( 0, 69, 140 );
-$blue1: rgb( 0, 114, 188 );
-$blue2: rgb( 0, 161, 228 );
+$blue-1: #002157;
+$blue-2: #004191;
+$blue0: #00458c;
+$blue1: #0072bc;
+$blue2: #00a1e4;
 
 /*
 ** Laranja #fbbc21
@@ -19,6 +20,7 @@ $orange1: #ffd64f;
 ** Amarelo
 */
 $yellow-1: #ddc242;
+$yellow-2: #FFD201;
 $yellow0: #f8df68;
 $yellow1: #ffed95;
 $yellow2: #FFBA00;
@@ -27,21 +29,21 @@ $yellow3: #fbbc21;
 /*
 ** Cinza
 */
-$gray0: rgb( 36, 29, 27 );
-$gray1: rgb( 101, 104, 104 );
-$gray2: rgb( 182, 186, 175 );
-$gray3: rgb( 227, 230, 224 );
-$gray4: rgb( 242, 241, 241 );
+$gray0: #241d1b;
+$gray1: #656868;
+$gray2: #b6baaf;
+$gray3: #e3e6e0;
+$gray4: #f2f1f1;
 
 /*
 ** Vermelho
 */
-$red: rgb( 237, 26, 59 );
+$red: #ed1a3b;
 
 /*
 ** Verde
 */
-$green: rgb( 165, 207, 76 );
+$green: #a5cf4c;
 
 $white: #FFFFFF;
 $black: #000000;
