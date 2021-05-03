@@ -4,6 +4,11 @@
     margin-top: 40px;
 
     .pagination {
+        @media screen and (max-width: 767px) {
+            flex-flow: wrap;
+            justify-content: center;
+        }
+    
         .page-item {
             .page-link {
                 cursor: pointer;
@@ -11,6 +16,10 @@
                 font-weight: bold;
                 color: $blue-2;
                 border-color: $blue-2;
+                
+                @media screen and (max-width: 767px) {
+                    font-size: 12px;
+                }
             }
 
             &.disabled {

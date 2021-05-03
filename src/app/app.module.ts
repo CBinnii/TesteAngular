@@ -16,12 +16,14 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
-import { ProdutosService } from './_services/produtos.service';
 import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { AlertaComponent } from './components/alerta/alerta.component';
+
+import { ProdutosService } from './_services/produtos.service';
+import { EnderecoService } from './_services/endereco.service';
+import { PedidosService } from './_services/pedidos.service';
 
 @NgModule({
 	declarations: [
@@ -48,7 +50,9 @@ import { AlertaComponent } from './components/alerta/alerta.component';
 		appRoutingModule
 	],
 	providers: [
-		ProdutosService
+		ProdutosService,
+		EnderecoService,
+		PedidosService
 	],
 	bootstrap: [AppComponent]
 })

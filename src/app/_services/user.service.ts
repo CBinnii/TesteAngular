@@ -13,7 +13,7 @@ export class UserService {
 	}
 
 	register(user: User) {
-		return this.http.put(`https://6089cd648c8043001757f650.mockapi.io/User/`, user);
+		return this.http.post(`https://6089cd648c8043001757f650.mockapi.io/User/`, user);
 	}
 
 	getUser(user: User) {

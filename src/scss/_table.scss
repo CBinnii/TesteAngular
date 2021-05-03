@@ -1,0 +1,45 @@
+.table {
+    background-color: $white;
+    font-family: 'Hurme', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+    .thead {
+        border-top: 3px solid #cacaca;
+        border-bottom: 3px solid #cacaca;
+        padding: 0 5px 10px 5px;
+        font-size: 16px;
+        font-family: "Hurme Bold", Helvetica, Arial, sans-serif;
+        color: #5f5f5f;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .tbody {
+        border-bottom: 3px solid #cacaca;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+        .trow {
+            margin: 0;
+            border-bottom: 1px dotted #cacaca;
+            padding: 10px 0;
+
+            &:nth-child(odd) {
+                background-color: $white;
+            }
+            &:nth-child(even) {
+                background-color: $yellow1;
+            }
+
+            &:last-child {
+                border: none;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+            &:hover {
+                background-color: $gray2;
+            }
+        }
+    }
+}

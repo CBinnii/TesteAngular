@@ -8,7 +8,7 @@
                 <input type="text" formControlName="nome" class="form-control"
                     [ngClass]="{ 'is-invalid': submitted && f.nome.errors }" />
                 <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
-                    <div *ngIf="f.nome.errors.required">First Name é obrigatório</div>
+                    <div *ngIf="f.nome.errors.required">Nome completo é obrigatório</div>
                 </div>
             </div>
             <div class="form-group">
@@ -24,7 +24,7 @@
                 <input type="text" formControlName="username" class="form-control"
                     [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
                 <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                    <div *ngIf="f.username.errors.required">Username é obrigatório</div>
+                    <div *ngIf="f.username.errors.required">Usuário é obrigatório</div>
                 </div>
             </div>
             <div class="form-group">

@@ -21,7 +21,7 @@ const routes: Routes = [
     { path: 'produto/:productId', component: ProdutoDetalheComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'carrinho', component: CarrinhoComponent },
-    { path: 'novo-endereco', component: PerfilComponent },
+    { path: 'novo-endereco', component: PerfilComponent, canActivate: [AuthGuard] },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

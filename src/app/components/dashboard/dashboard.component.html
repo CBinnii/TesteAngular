@@ -2,6 +2,37 @@
 
 <div class="dashboard">
     <div class="container">
-        <h1>Bem vindo ao mundo Dotz</h1>
+        <h2>Bem vindo ao mundo Dotz</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="dados-user">
+                    <p class="top-text">Seus endereços cadastrados:</p>
+                    <ul>
+                        <li  *ngFor="let e of enderecos">
+                            {{ e.Endereco }}, {{ e.Numero }} - {{ e.CEP}} - {{ e.Cidade }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="dados-user">
+                    <p class="top-text">Últimas trocas:</p>
+
+                    <div class="table">
+                        <div class="thead row">
+                            <div class="col-6">Produto</div>
+                            <div class="col-6">Status</div>
+                        </div>
+                        <div class="tbody">
+                            <div class="trow row" *ngFor="let p of pedidos">
+                                <div class="col-6">{{ p.produto }}</div>
+                                <div class="col-6 d-flex align-items-center"><strong>{{ p.status }}</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

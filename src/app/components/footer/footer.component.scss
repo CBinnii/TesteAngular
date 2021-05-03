@@ -24,6 +24,10 @@
             font-size: 14px;
             margin: 0;
             margin-bottom: 15px;
+            
+            @media screen and (max-width: 767px) {
+                margin-top: 15px;
+            }
         }
 
         p {
@@ -47,9 +51,20 @@
         .aplicativos {
             text-align: right;
 
-            p {
-                margin: 0;
-                padding: 0;
+            @media screen and (max-width: 767px) {
+                text-align: left;
+            }
+
+            .app {
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                @media screen and (max-width: 767px) {
+                    display: flex;
+                    justify-content: center;
+                }
             }
 
             img {
@@ -69,6 +84,10 @@
         padding-top: 30px;
         margin-top: 30px;
         border-top: 2px dotted #424242;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
         
         .copyrights {
             display: flex;

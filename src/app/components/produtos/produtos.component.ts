@@ -11,13 +11,8 @@ import { ProdutosService } from 'src/app/_services/produtos.service';
 })
 export class ProdutosComponent implements OnInit {
 	produtos: any[];
-    // array of all items to be paged
     private allItems: any[];
-
-    // pager object
     pager: any = {};
-
-    // paged items
     pagedItems: any[];
 
 	constructor( private produtosService : ProdutosService, private http: HttpClient, private route: ActivatedRoute, private pagerService: PaginateService) { }

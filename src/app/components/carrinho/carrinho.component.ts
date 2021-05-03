@@ -9,18 +9,10 @@ import { CarrinhoService } from 'src/app/_services/carrinho.service';
 })
 export class CarrinhoComponent implements OnInit {
 	items = this.carrinhoService.getItems();
-	checkoutForm = this.formBuilder.group({
-		name: '',
-		address: ''
-	});
 
 	constructor(private carrinhoService: CarrinhoService, private formBuilder: FormBuilder,) { }
 
 	ngOnInit(): void {
-	}
-	onSubmit(): void {
-		this.items = this.carrinhoService.clearCart();
-		console.warn('Your order has been submitted', this.checkoutForm.value);
-		this.checkoutForm.reset();
+		console.log(this.items)
 	}
 }

@@ -10,29 +10,52 @@
 	display: flex;
 	align-items: center;
 	background-color: $orange-1;
-	// background-color: $white;
 	-webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
 	box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
 	color: $orange-1;
 	font-weight: 600;
 
+	@media screen and (max-width: 767px) {
+		position: relative;
+		height: auto;
+		padding: 15px 0;
+	}
+
 	.container {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+
+		@media screen and (max-width: 767px) {
+			flex-direction: column;
+		}
 	}
 
 	.header-logo {
+		display: flex;
+		align-items: center;
+
+		@media screen and (max-width: 767px) {
+			width: 100%;
+			justify-content: space-between;
+		}
+
 		a {
 			outline: none;
 		}
+	}
+
+	.navbar-toggler {
+		color: $white;
+
+		display: none;
 	}
 
 	.navbar-nav {
 		li {
 			a {
 				color: $white;
-				// color: $orange-1;
 				font-size: 16px;
 				font-family: 'Hurme', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 				text-transform: uppercase;
@@ -47,4 +70,83 @@
 			}
 		}
 	}
+
+	.buttons {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	@media screen and (max-width: 767px) {
+		.buttons {
+			justify-content: space-between;
+		}
+		
+		.navbar-toggler {
+			display: block;
+		}
+
+		.navbar {
+			width: 100%;
+		}
+
+		.navbar-collapse {
+			position: absolute;
+			top: 10px;
+			right: 0;
+			background-color: rgb(255, 255, 255);
+			color: rgb(247, 148, 29);
+			padding: 10px 20px;
+			box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px 0px;
+			width: 100%;
+			
+			ul {
+				text-align: center;
+				
+				li {
+					a {
+						color: $orange-1;
+						
+						&.dropdown-item {
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.btn-carrinho {
+	background-color: $white;
+	font-family: 'Hurme', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px 10px;
+    border-radius: 100%;
+    color: $orange-1;
+	margin-right: 15px;
+}
+
+.bnt-login {
+    border-radius: 10em;
+    background-color: #f8df68;
+	font-family: 'Hurme', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 0;
+    color: #172860;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+	margin-right: 15px;
+}
+
+.bnt-cadastrar {
+    border-radius: 10em;
+    background-color: #172860;
+    padding: 10px 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
 }

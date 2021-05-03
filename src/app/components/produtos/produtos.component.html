@@ -28,9 +28,9 @@
 
 		<div class="paginacao">
 			<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-				<!-- <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+				<li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
 					<a class="page-link" (click)="setPage(1)"><i class="fas fa-fast-backward"></i></a>
-				</li> -->
+				</li>
 				<li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
 					<a class="page-link" (click)="setPage(pager.currentPage - 1)"><i class="fas fa-chevron-left"></i></a>
 				</li>
@@ -40,9 +40,9 @@
 				<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
 					<a class="page-link" (click)="setPage(pager.currentPage + 1)"><i class="fas fa-chevron-right"></i></a>
 				</li>
-				<!-- <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+				<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
 					<a class="page-link" (click)="setPage(pager.totalPages)"><i class="fas fa-fast-forward"></i></a>
-				</li> -->
+				</li>
 			</ul>
 		</div>
 	</div>

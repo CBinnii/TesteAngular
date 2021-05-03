@@ -2,6 +2,7 @@
 
 .carrinho {
     padding: 40px;
+	min-height: 400px;
     
 	h2 {
 		text-align: center;
@@ -12,5 +13,51 @@
 		line-height: 38px;
 		font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-weight: bold;
+	}
+
+	.dados-carrinho {
+		.top-text {
+			font-size: 20px;
+			text-transform: uppercase;
+			padding: 10px;
+			text-align: center;
+			background-color: $orange-1;
+			color: $white;
+			font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-weight: bold;
+			margin: 0;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+		}
+		
+		span {
+			font-family: "Futura DZ";
+		}
+		
+		@media screen and (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.carrinho-vazio {
+		min-height: 200px;
+		text-align: center;
+	
+		h3 {
+			font-size: 38px;
+			margin-bottom: 5px;
+			color: $blue0;
+			letter-spacing: 0;
+			line-height: 38px;
+			font-family: 'Hurme Bold', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+	
+		p {
+			color: #727272;
+			font-family: "Hurme", Helvetica, Arial, sans-serif;
+		}
+	
 	}
 }

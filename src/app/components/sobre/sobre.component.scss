@@ -6,6 +6,10 @@
 	background-size: cover;
 	min-height: 490px;
 
+	@media screen and (max-width: 767px) {
+		background-position: center;
+	}
+
 	.container {
 		height: 100%;
 		display: flex;
@@ -37,6 +41,11 @@
 			margin-left: .4em;
 			content: "\2014";
 			font-family: "Hurme", Helvetica, Arial, sans-serif;
+		}
+		
+		@media screen and (max-width: 767px) {
+			font-size: 25px;
+			line-height: 1.2;
 		}
 	}
 
