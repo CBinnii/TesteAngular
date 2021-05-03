@@ -40,4 +40,20 @@
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
     }
+
+	.thead {
+		background-color: $orange-1;
+		color: $white;
+	}
+
+	@media screen and (max-width: 767px) {
+		.tbody {
+			font-size:  12px;
+
+			.col-4 {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
 }

@@ -5,15 +5,15 @@
         
         <div class="table">
             <div class="thead row">
-                <div class="col-8">Produto</div>
-                <div class="col-2">Preço</div>
-                <div class="col-2">Status</div>
+                <div class="col-4 col-sm-8">Produto</div>
+                <div class="col-4 col-sm-2">Preço</div>
+                <div class="col-4 col-sm-2">Status</div>
             </div>
             <div class="tbody">
                 <div class="trow row" *ngFor="let p of pagedItems">
-                    <div class="col-8">{{ p.produto }}</div>
-                    <div class="col-2"><strong><span>D\</span> {{ p.valor }}</strong></div>
-                    <div class="col-2 d-flex align-items-center"><strong>{{ p.status }}</strong></div>
+                    <div class="col-4 col-sm-8">{{ p.produto }}</div>
+                    <div class="col-4 col-sm-2"><strong><span>D\</span> {{ p.valor }}</strong></div>
+                    <div class="col-4 col-sm-2 d-flex align-items-center"><strong>{{ p.status }}</strong></div>
                 </div>
             </div>
         </div>
