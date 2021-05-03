@@ -27,6 +27,6 @@ export class DashboardComponent implements OnInit {
 	}
 
 	listarPedidos() {
-		this.PedidosService.listar(this.currentUser[0].id).subscribe(dados => this.pedidos = dados);
+		this.PedidosService.listarUltimos5(this.currentUser[0].id, 3).subscribe(dados => this.pedidos = dados);
 	}
 }

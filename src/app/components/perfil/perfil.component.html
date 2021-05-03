@@ -1,6 +1,6 @@
 <div class="perfil">
     <div class="container">
-        <h2>Cadastro de Endereco</h2>
+        <h2>Cadastro de Endereço</h2>
         
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="CEP">CEP</label>
-                <input type="text" formControlName="CEP" class="form-control"
+                <input type="text" formControlName="CEP" class="form-control" mask="00000-000"
                     [ngClass]="{ 'is-invalid': submitted && f.CEP.errors }" />
                 <div *ngIf="submitted && f.CEP.errors" class="invalid-feedback">
                     <div *ngIf="f.CEP.errors.required">CEP é obrigatório</div>

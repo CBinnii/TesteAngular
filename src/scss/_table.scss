@@ -24,6 +24,10 @@
             border-bottom: 1px dotted #cacaca;
             padding: 10px 0;
 
+            span {
+                font-family: "Futura DZ";
+            }
+
             &:nth-child(odd) {
                 background-color: $white;
             }

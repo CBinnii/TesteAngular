@@ -1,0 +1,36 @@
+<div class="banner banner-pedidos"></div>
+<div class="pedidos">
+    <div class="container">
+        <h2>Trocas realizadas:</h2>
+        
+        <div class="table">
+            <div class="thead row">
+                <div class="col-8">Produto</div>
+                <div class="col-2">Preço</div>
+                <div class="col-2">Status</div>
+            </div>
+            <div class="tbody">
+                <div class="trow row" *ngFor="let p of pagedItems">
+                    <div class="col-8">{{ p.produto }}</div>
+                    <div class="col-2"><strong><span>D\</span> {{ p.valor }}</strong></div>
+                    <div class="col-2 d-flex align-items-center"><strong>{{ p.status }}</strong></div>
+                </div>
+            </div>
+        </div>
+
+        
+		<div class="paginacao">
+			<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+				<li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+					<a class="page-link" (click)="setPage(pager.currentPage - 1)"><i class="fas fa-chevron-left"></i></a>
+				</li>
+				<li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+					<a class="page-link" (click)="setPage(page)">{{page}}</a>
+				</li>
+				<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+					<a class="page-link" (click)="setPage(pager.currentPage + 1)"><i class="fas fa-chevron-right"></i></a>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>

@@ -9,6 +9,7 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { CarrinhoComponent } from './components/carrinho/carrinho.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 import { AuthGuard } from './_helpers/auth.guard';
 
@@ -16,11 +17,12 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'produtos', component: ProdutosComponent },
     { path: 'produto/:productId', component: ProdutoDetalheComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'carrinho', component: CarrinhoComponent },
+    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+    { path: 'pedidos', component: PedidosComponent, canActivate: [AuthGuard] },
     { path: 'novo-endereco', component: PerfilComponent, canActivate: [AuthGuard] },
 
     // otherwise redirect to home
