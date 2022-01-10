@@ -20,6 +20,14 @@
                 </div>
             </div>
             <div class="form-group">
+                <label for="emailConfirmacao">Confirmar E-mail</label>
+                <input type="text" onpaste="return false" formControlName="emailConfirmacao" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.emailConfirmacao.errors }" />
+                <div *ngIf="submitted && f.emailConfirmacao.errors" class="invalid-feedback">
+                    <div *ngIf="f.emailConfirmacao.errors.required">Confirmação de e-mail é obrigatório</div>
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="username">Usuário</label>
                 <input type="text" formControlName="username" class="form-control"
                     [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />

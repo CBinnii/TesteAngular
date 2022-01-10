@@ -15,6 +15,7 @@ export class RegisterComponent implements OnInit {
 	registerForm: FormGroup;
 	loading = false;
 	submitted = false;
+	nome: string[] = [];
 
 	constructor(
 		private formBuilder: FormBuilder,
@@ -30,9 +31,10 @@ export class RegisterComponent implements OnInit {
 
 	ngOnInit() {
 		this.registerForm = this.formBuilder.group({
-			nome: ['', Validators.required],
-			email: ['', Validators.required],
-			username: ['', Validators.required],
+			nome: ['', Validators.required, Validators.maxLength(100)],
+			email: ['', Validators.required, Validators.maxLength(100), Validators.email],
+			emailConfirmacao: ['', Validators.required, Validators.maxLength(100), Validators.email],
+			username: ['', Validators.required, Validators.minLength(4)],
 			password: ['', [Validators.required, Validators.minLength(6)]]
 		});
 	}
@@ -46,17 +48,44 @@ export class RegisterComponent implements OnInit {
 			return;
 		}
 
-		this.loading = true;
-		this.userService.register(this.registerForm.value)
-			.pipe(first())
-			.subscribe(
-				data => {
-					this.alertService.success('Registrado com sucesso!', true);
-					this.router.navigate(['/login']);
-				},
-				error => {
-					this.alertService.error(error);
-					this.loading = false;
-				});
+		if (this.validacao()) {
+			this.loading = true;
+			this.userService.register(this.registerForm.value)
+				.pipe(first())
+				.subscribe(
+					data => {
+						this.alertService.success('Registrado com sucesso!', true);
+						this.router.navigate(['/login']);
+					},
+					error => {
+						this.alertService.error(error);
+						this.loading = false;
+					});
+		}
+	}
+
+    validacao(): Boolean {
+        if (!this.isName(this.registerForm.controls['nome'].value)) {
+            this.alertService.error("Nome inválido");
+        } else if (!this.isEmail(this.registerForm.controls['emailConfirmacao'].value)) {
+			this.alertService.error('* Email de confirmação inválido');
+		} else if (this.registerForm.controls['emailConfirmacao'].value != this.registerForm.controls['email'].value) {
+			this.alertService.error('* Email de confirmação diferente do informado.');
+		} else {
+        	return true;
+		}
+    }
+
+    isName(name: string): boolean {
+		this.nome = name.match(/^[A-ZÀ-Ÿ][A-zÀ-ÿ']+\s([A-zÀ-ÿ']\s?)*[A-ZÀ-Ÿ][A-zÀ-ÿ']+$/);
+		if (this.nome != null) {
+			return true;
+		} else {
+			return false;
+		}
+    }
+	isEmail(email: string): boolean {
+		let regexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+		return regexp.test(email);
 	}
 }
